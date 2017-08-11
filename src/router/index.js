@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import routes from './routes'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    }
-  ]
+const router = new Router({
+  routes: routes
 })
+
+// 全局路由的钩子函数，处理跳转之前的逻辑，比如登陆
+router.beforeEach((to, from, next) => {
+  next()
+})
+
+export default router

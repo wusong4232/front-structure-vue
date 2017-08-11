@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <i class="fa fa-camera-retro"></i> fa-camera-retro
     <router-view></router-view>
   </div>
 </template>

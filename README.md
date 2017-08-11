@@ -1,6 +1,6 @@
 # front-structure-vue
 
-> A Vue.js project, 练习前端项目构建，配置，规则，项目干净
+> A Vue.js project, 练习前端项目构建，配置，规则
 
 ## Build Setup
 
