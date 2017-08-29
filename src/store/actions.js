@@ -1,5 +1,8 @@
 /**
  * Created by 30411 on 2016/12/6.
+ *
+ * 需要处理 store 的请求使用 action 处理
+ *
  */
 import * as API from './../api'
 import * as types from './mutation-type'

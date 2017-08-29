@@ -4,7 +4,9 @@ import Vue from 'vue'
 import iView from 'iview'
 import App from './App'
 import router from './router'
+import 'iview/dist/styles/iview.css'
 import './assets/css/font-awesome.min.css'
+import './assets/css/base.css'
 
 Vue.config.productionTip = false
 

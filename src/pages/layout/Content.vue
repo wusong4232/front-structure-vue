@@ -1,6 +1,6 @@
 <template>
-  <div>
-    index
+  <div class="h100">
+    <router-view></router-view>
   </div>
 </template>
 <script>
