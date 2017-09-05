@@ -2,7 +2,7 @@
   <div>
     <div v-for="item in data">
       <div v-if="!item.children">
-        <Menu-item name="item.key">{{item.title}}</Menu-item>
+        <Menu-item name="item.name">{{item.title}}-{{item.name}}</Menu-item>
       </div>
       <div v-else>
         <Submenu name="item.name">

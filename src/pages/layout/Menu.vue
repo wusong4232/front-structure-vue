@@ -1,8 +1,7 @@
 <template>
   <div>
-    <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']" on-select="">
-      <MenuNode
-        :data="data">
+    <Menu theme="light" width="auto">
+      <MenuNode :data="data">
       </MenuNode>
     </Menu>
   </div>
