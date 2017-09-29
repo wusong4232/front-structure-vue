@@ -23,7 +23,6 @@
       </i-col>
     </Row>
 
-
   </div>
 </template>
 <script>

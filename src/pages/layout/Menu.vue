@@ -4,6 +4,16 @@
       <MenuNode :data="data">
       </MenuNode>
     </Menu>
+
+    <!--<dropdown>test dropdown</dropdown>-->
+    <mlMenu>
+      <mlMenuItem name="1">
+        itemafsa
+      </mlMenuItem>
+      <mlMenuItem name="1">
+        itemafsa
+      </mlMenuItem>
+    </mlMenu>
   </div>
 </template>
 <script>
@@ -23,9 +33,10 @@
 
   import menuConfig from './menuConfig'
   import MenuNode from './MenuNode.vue'
+  import Dropdown from './../../common/components'
 
   export default {
-    components: { MenuNode },
+    components: { MenuNode, Dropdown },
     data () {
       return {
         data: menuConfig

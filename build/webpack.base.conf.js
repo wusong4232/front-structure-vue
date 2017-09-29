@@ -46,6 +46,22 @@ module.exports = {
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader',
+      //     'autoprefixer-loader'
+      //   ]
+      // },
+      // {
+      //   test: /\.less$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader',
+      //     'less-loader'
+      //   ]
+      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',

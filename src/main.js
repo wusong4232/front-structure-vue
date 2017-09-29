@@ -7,10 +7,13 @@ import router from './router'
 import 'iview/dist/styles/iview.css'
 import './assets/css/font-awesome.min.css'
 import './assets/css/base.css'
+import iMl from './common/components'
 
 Vue.config.productionTip = false
 
 Vue.use(iView)
+
+Vue.use(iMl)
 
 /* eslint-disable no-new */
 new Vue({
