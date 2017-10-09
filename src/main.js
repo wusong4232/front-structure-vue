@@ -10,12 +10,10 @@ import './assets/css/base.css'
 import iMl from './common/components'
 import './common/assets/css/zTreeStyle.min.css'
 import './common/assets/js/jquery.ztree.all.min'
-import ztree from 'ztree-vue'
 
 Vue.config.productionTip = false
 
 Vue.use(iView)
-Vue.use(ztree)
 
 Vue.use(iMl)
 
