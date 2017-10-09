@@ -1,5 +1,12 @@
 <template>
-  <ul :class="classes" :style="styles"><slot></slot></ul>
+  <div>
+    <Tree-node
+      v-for="item in data"
+      :key="item"
+      :data="item">
+    </Tree-node>
+    <div :class="[prefixCls + '-empty']" v-if="!data.length">暂无目录数据</div>
+  </div>
 </template>
 <script>
   import Emitter from '../../mixins/emitter'
@@ -8,8 +15,14 @@
 
   export default {
     name: 'Menu',
-    mixins: [ Emitter ],
+    mixins: [Emitter],
     props: {
+      data: {
+        type: Array,
+        default () {
+          return []
+        }
+      },
       activeName: {
         type: [String, Number]
       },
@@ -89,14 +102,14 @@
   }
 
   /*.iml-menu :after{*/
-    /*content: '';*/
-    /*display: block;*/
-    /*width: 100%;*/
-    /*height: 1px;*/
-    /*background: #78e154;*/
-    /*position: absolute;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
+  /*content: '';*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*height: 1px;*/
+  /*background: #78e154;*/
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
   /*}*/
 
 </style>

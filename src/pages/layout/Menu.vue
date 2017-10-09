@@ -13,6 +13,15 @@
       <mlMenuItem name="1">
         itemafsa
       </mlMenuItem>
+      <mlSubmenu>
+        <template slot="title">
+          <Icon type="stats-bars"></Icon>
+          统计分析
+        </template>
+        <mlMenuItem name="3">
+          iteaaaaaaaa
+        </mlMenuItem>
+      </mlSubmenu>
     </mlMenu>
   </div>
 </template>

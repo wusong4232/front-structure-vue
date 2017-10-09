@@ -20,16 +20,16 @@ const menuTabsConfig = [
     title: '商家',
     icon: '',
     children: [
-      {name: 'name1', title: '新建商家', icon: 'paper-airplane', path: 'list'}
-      // {
-      //   name: 'name2',
-      //   title: '商家列表',
-      //   icon: 'paper-airplane',
-      //   path: 'list',
-      //   children: [
-      //     {name: 'name3', title: '新建商家', icon: 'paper-airplane', path: 'list'}
-      //   ]
-      // }
+      {name: 'name1', title: '新建商家', icon: 'paper-airplane', path: 'list'},
+      {
+        name: 'name2',
+        title: '商家列表',
+        icon: 'paper-airplane',
+        path: 'list',
+        children: [
+          {name: 'name3', title: '商家lii', icon: 'paper-airplane', path: 'list'}
+        ]
+      }
     ]
   },
   {
