@@ -1,21 +1,28 @@
 <template>
   <div>
-    <Tree-node
+    <subMenu
       v-for="item in data"
-      :key="item"
+      :key="item.name"
       :data="item">
-    </Tree-node>
+    </subMenu>
     <div :class="[prefixCls + '-empty']" v-if="!data.length">暂无目录数据</div>
   </div>
 </template>
 <script>
   import Emitter from '../../mixins/emitter'
+  import subMenu from './submenu.vue'
 
   const prefixCls = 'iml-menu'
+
+  /**
+   * menu 做菜单组件的外观处理
+   * submenu 做菜单的递归展示
+   */
 
   export default {
     name: 'Menu',
     mixins: [Emitter],
+    components: {subMenu},
     props: {
       data: {
         type: Array,
@@ -60,6 +67,18 @@
         }
         this.broadcast('Submenu', 'on-update-active-name', false)
         this.broadcast('MenuItem', 'on-update-active-name', this.currentActiveName)
+      },
+      updateOpenKeys (name) {
+        const index = this.openNames.indexOf(name)
+        if (index > -1) {
+          this.openNames.splice(index, 1)
+        } else {
+          this.openNames.push(name)
+          if (this.accordion) {
+            this.openNames.splice(0, this.openNames.length)
+            this.openNames.push(name)
+          }
+        }
       }
     },
     mounted () {
